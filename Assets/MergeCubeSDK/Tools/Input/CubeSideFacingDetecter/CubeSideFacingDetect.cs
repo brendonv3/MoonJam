@@ -8,6 +8,9 @@ public class CubeSideFacingDetect : MonoBehaviour {
 	static CubeSideFacingDetect s_ins;
 	void Awake(){
 		s_ins = this;
+
+		for (int i = 0; i < scenes.Length; i++)
+			scenes [i].SetActive (false);
 	}
 	public static CubeSideFacingDetect ins {
 		get { return s_ins; }
